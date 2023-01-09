@@ -107,7 +107,7 @@ class Capistrano::Notifier::Mail < Capistrano::Notifier::Base
   def template(template_name)
     config_file = "#{templates_path}/#{template_name}"
 
-    unless File.exists?(config_file)
+    unless File.exist?(config_file)
       config_file = File.join(File.dirname(__FILE__), "templates/#{template_name}")
     end
 
